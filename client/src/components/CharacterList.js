@@ -5,7 +5,7 @@ import CharacterCard from './CharacterCard'
 
 const CharacterList = () => {
 
-  const {baseAPI, setBaseAPI, data, setData} = useContext(APIContext)
+  const {baseAPI, setBaseAPI, data, setData, updater} = useContext(APIContext)
 
   useEffect(()=>{
     axios.get(baseAPI)
@@ -14,7 +14,7 @@ const CharacterList = () => {
       setData(res.data.results)
     })
     .catch(err => console.log(err))
-  },[])
+  },[updater])
 
   return (
     <>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CharacterCard = (props) => {
-  console.log(props)
-  return(<></>)
+const CharacterCard = ({item}) => {
+  console.log(item)
+  return(<div>{item.name}</div>)
 }
 
 export default CharacterCard
